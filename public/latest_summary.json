@@ -1,16 +1,36 @@
 {
   "run_date": "2026-07-14",
-  "generated_at": "2026-07-14T14:23:58Z",
+  "generated_at": "2026-07-14T14:28:30Z",
   "per_source_counts": {
-    "City of Tampa": {
+    "tampa_city": {
       "jurisdiction": "City of Tampa",
-      "fetched": 6,
+      "fetched": 17,
       "new": 6
     },
-    "City of Lakeland": {
+    "hillsborough_county": {
+      "jurisdiction": "Hillsborough County",
+      "fetched": 0,
+      "new": 0
+    },
+    "hillsborough_dev_review": {
+      "jurisdiction": "Hillsborough County (Development Review)",
+      "fetched": 0,
+      "new": 0
+    },
+    "lakeland": {
       "jurisdiction": "City of Lakeland",
-      "fetched": 34,
+      "fetched": 93,
       "new": 34
+    },
+    "hernando_county": {
+      "jurisdiction": "Hernando County",
+      "fetched": 1,
+      "new": 0
+    },
+    "pinellas_drs": {
+      "jurisdiction": "Pinellas County (Development Review - Site Plans)",
+      "fetched": 0,
+      "new": 0
     }
   },
   "total_new": 40,

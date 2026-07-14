@@ -15,6 +15,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
 import logging
 import sys
 import traceback
@@ -68,6 +69,13 @@ def main() -> int:
     dedup_index = DedupIndex(cfg.data_path("dedup_index.csv"))
     all_new_records: List[PermitRecord] = []
     failures: List[str] = []
+    # Per-connector fetched/new counts, persisted to data/last_run_counts.json
+    # at the end of this run. This is what ci_build_dashboard.py reads to
+    # show ALL sources in the dashboard's "Source status" table — including
+    # ones that had 0 new results — rather than silently omitting any
+    # source that didn't happen to find something new today (which looked
+    # like those sources weren't checked at all, when really they were).
+    per_source_counts: dict[str, dict] = {}
 
     for name in enabled_names:
         connector_cls = ALL_CONNECTORS[name]
@@ -78,6 +86,12 @@ def main() -> int:
             logger.error("[%s] FAILED: %s", name, exc)
             logger.debug(traceback.format_exc())
             failures.append(f"{name}: {exc}")
+            per_source_counts[name] = {
+                "jurisdiction": connector.jurisdiction,
+                "fetched": 0,
+                "new": 0,
+                "error": str(exc),
+            }
             continue
 
         if not args.dry_run and raw:
@@ -86,11 +100,22 @@ def main() -> int:
         new_records = dedup_index.filter_new(normalized) if not args.dry_run else normalized
         logger.info("[%s] %d new records after dedup", name, len(new_records))
         all_new_records.extend(new_records)
+        per_source_counts[name] = {
+            "jurisdiction": connector.jurisdiction,
+            "fetched": len(raw),
+            "new": len(new_records),
+        }
 
     if not args.dry_run and all_new_records:
         append_normalized_csv(cfg, all_new_records)
         if "sqlite" in cfg.storage.backends:
             write_sqlite(cfg, all_new_records)
+
+    if not args.dry_run:
+        counts_path = cfg.data_path("last_run_counts.json")
+        counts_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(counts_path, "w", encoding="utf-8") as f:
+            json.dump(per_source_counts, f, indent=2)
 
     scored = score_records(all_new_records, cfg.scoring)
     if not args.dry_run:

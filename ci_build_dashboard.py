@@ -48,17 +48,24 @@ def main() -> int:
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     new_today = [r for r in active_records if (r.date_collected or "")[:10] == today]
 
-    # per_source_counts isn't available here the way cowork_collect.py has
-    # it (main.py already logged its own per-connector breakdown to stdout
-    # during the fetch step) — approximate it by jurisdiction, from
-    # whatever was collected today, so the dashboard's source-status table
-    # still shows something meaningful.
-    per_source_counts: dict[str, dict] = {}
-    for r in new_today:
-        key = r.jurisdiction or "unknown"
-        per_source_counts.setdefault(key, {"jurisdiction": key, "fetched": 0, "new": 0})
-        per_source_counts[key]["new"] += 1
-        per_source_counts[key]["fetched"] += 1
+    # main.py writes data/last_run_counts.json at the end of its run, with
+    # one entry per connector (including ones that fetched 0 / found 0 new)
+    # — this is the authoritative source-status list. Prefer it; only fall
+    # back to reconstructing counts from today's records (which silently
+    # omits any source that had zero new results, making it look like that
+    # source wasn't checked at all) if main.py hasn't run yet in this
+    # environment.
+    counts_path = cfg.data_path("last_run_counts.json")
+    if counts_path.exists():
+        with open(counts_path, "r", encoding="utf-8") as f:
+            per_source_counts = json.load(f)
+    else:
+        per_source_counts = {}
+        for r in new_today:
+            key = r.jurisdiction or "unknown"
+            per_source_counts.setdefault(key, {"jurisdiction": key, "fetched": 0, "new": 0})
+            per_source_counts[key]["new"] += 1
+            per_source_counts[key]["fetched"] += 1
 
     summary = {
         "run_date": today,

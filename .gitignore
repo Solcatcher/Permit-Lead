@@ -4,6 +4,7 @@ __pycache__/
 data/raw/
 data/scored/
 data/*.db
+data/last_run_counts.json
 logs/
 dashboard.html
 .DS_Store
