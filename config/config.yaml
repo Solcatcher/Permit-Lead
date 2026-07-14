@@ -1,0 +1,57 @@
+# CaptiveAire Permit Lead-Gen System — main configuration
+# ---------------------------------------------------------------------------
+# Edit this file to turn connectors on/off, change the lookback window, or
+# adjust scoring behavior. See README.md section 7 for a walkthrough.
+
+run:
+  # How many days back to look for NEW or UPDATED records on each run.
+  # 3-4x your actual schedule interval is a safe cushion against a missed
+  # run (e.g. daily cron -> 3-4 days lookback) since these sources do not
+  # support reliable server-side "changed since" filters in all cases.
+  lookback_days: 5
+  # Root folder for all output data (overridden by DATA_DIR env var if set)
+  data_dir: "data"
+  log_dir: "logs"
+  # Max HTTP requests per second, per connector (simple token-bucket limiter)
+  max_requests_per_second: 2
+  # HTTP timeout (seconds) for each request
+  request_timeout_seconds: 30
+  # Retry attempts for a failing HTTP request before giving up on that page
+  max_retries: 4
+
+storage:
+  # "csv" is supported out of the box. Set to "sqlite" to also (or instead)
+  # write to a local SQLite database at <data_dir>/permits.db.
+  backends: ["csv", "sqlite"]
+  sqlite_path: "data/permits.db"
+
+connectors:
+  tampa_city:
+    enabled: true
+  hillsborough_county:
+    enabled: true
+  hillsborough_dev_review:
+    enabled: true
+  lakeland:
+    enabled: true
+  hernando_county:
+    enabled: true
+  pinellas_drs:
+    enabled: true
+
+scoring:
+  # Minimum project_value ($) to get the project-value score bonus.
+  # CaptiveAire-relevant kitchen ventilation jobs are rarely tiny, but many
+  # permits have no value populated at all, so this is a bonus, not a gate.
+  value_bonus_threshold: 25000
+  # Records with CREATEDDATE/ISSUE_DATE older than this many days score
+  # lower on recency (stale leads are less actionable).
+  recency_full_score_days: 30
+  recency_zero_score_days: 180
+  # Score thresholds (0-100 scale) mapping to priority categories.
+  thresholds:
+    very_high: 75
+    high: 55
+    medium: 35
+    low: 15
+    # anything below "low" is "Not Relevant"

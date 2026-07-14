@@ -1,0 +1,36 @@
+name: Daily CaptiveAire Permit Collection
+
+on:
+  schedule:
+    # 09:00 UTC = 4-5 AM US Eastern (adjust for your timezone / DST as needed)
+    - cron: "0 9 * * *"
+  workflow_dispatch: {}   # allows manual "Run workflow" button too
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run collector
+        env:
+          SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}
+          ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
+        run: python main.py
+
+      - name: Commit updated data files back to the repo
+        run: |
+          git config user.name "captiveaire-permit-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/ logs/ || true
+          git diff --cached --quiet || git commit -m "Daily permit collection $(date -u +%Y-%m-%d)"
+          git push

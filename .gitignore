@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+data/raw/
+data/normalized/
+data/scored/
+data/*.db
+data/dedup_index.csv
+logs/
+dashboard.html
+.DS_Store

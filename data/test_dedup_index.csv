@@ -1,0 +1,4 @@
+# NOTE: this file is a leftover artifact from this build's own automated
+# test run (test_offline_pipeline.py) and is unrelated to production data.
+# It is safe to ignore or delete. The real dedup index that main.py
+# maintains lives at data/dedup_index.csv and is created on first run.
