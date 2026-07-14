@@ -29,6 +29,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from build_dashboard import build as build_dashboard_html
 from core.config import load_config
 from core.rollup import ACTIVE_WINDOW_DAYS, filter_active_window, load_all_normalized
+from core.trends import compute_trend
 from scoring.scorer import score_records
 
 
@@ -44,6 +45,7 @@ def main() -> int:
     all_records = load_all_normalized(cfg)
     active_records = filter_active_window(all_records, ACTIVE_WINDOW_DAYS)
     active_scored = score_records(active_records, cfg.scoring)
+    trend = compute_trend(all_records, cfg)
 
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     new_today = [r for r in active_records if (r.date_collected or "")[:10] == today]
@@ -81,6 +83,7 @@ def main() -> int:
         "not_relevant": sum(1 for r in active_scored if r["priority_category"] == "Not Relevant"),
         "new_today": len(new_today),
         "leads": active_scored,
+        "trend": trend,
     }
 
     summary_path = out_dir / "latest_summary.json"

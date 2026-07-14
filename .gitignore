@@ -5,6 +5,7 @@ data/raw/
 data/scored/
 data/*.db
 data/last_run_counts.json
+data/contact_enrichment.csv
 logs/
 dashboard.html
 .DS_Store

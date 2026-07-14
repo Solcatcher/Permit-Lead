@@ -19,6 +19,7 @@ TEMPLATE = """<!DOCTYPE html>
 <title>CaptiveAire Tampa Bay Permit Leads</title>
 <script src="https://cdn.jsdelivr.net/npm/gridjs@5.0.2/dist/gridjs.umd.js" integrity="sha384-/XXDzxe4FsGiAe50i/u9pY/Vy/uX654MHB1xoc1BJNnH1WXHhqHga9g3q5tF4gj7" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs@5.0.2/dist/theme/mermaid.min.css" integrity="sha384-jZvDSsmGB9oGGT/4l9bHXGoAv1OxvG/cFmSo0dZaSqmBgvQTKDBFAMftlXTmMbNW" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
 <style>
   :root {{
     color-scheme: dark;
@@ -112,6 +113,20 @@ TEMPLATE = """<!DOCTYPE html>
   a.src-link {{ color: var(--ca-green); text-decoration: none; font-size: 12px; font-weight: 600; }}
   a.src-link:hover {{ color: var(--ca-red); text-decoration: underline; }}
   .desc-cell {{ max-width: 420px; white-space: normal; line-height: 1.35; }}
+  .trend-section {{ display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 22px; }}
+  .trend-card {{
+    background: var(--ca-card); border: 1px solid var(--ca-border); border-radius: 10px;
+    padding: 14px 16px;
+  }}
+  .trend-chart-card {{ flex: 2 1 380px; }}
+  .trend-table-card {{ flex: 1 1 240px; }}
+  .trend-title {{ font-size: 13px; font-weight: 600; color: var(--ca-text); margin: 0 0 10px; }}
+  .trend-chart-wrap {{ position: relative; height: 200px; }}
+  .trend-table {{ width: 100%; border-collapse: collapse; font-size: 12.5px; }}
+  .trend-table th {{ text-align: left; color: var(--ca-text-muted); font-weight: 600; padding: 0 6px 6px 0; border-bottom: 1px solid var(--ca-border); }}
+  .trend-table td {{ padding: 5px 6px 5px 0; border-bottom: 1px solid var(--ca-border); }}
+  .trend-table td.n {{ text-align: right; font-variant-numeric: tabular-nums; }}
+  .trend-table tr:last-child td {{ border-bottom: none; }}
   footer {{ margin-top: 18px; font-size: 11.5px; color: var(--ca-text-muted); }}
 </style>
 </head>
@@ -127,6 +142,20 @@ TEMPLATE = """<!DOCTYPE html>
   <div class="card medium"><div class="num-row"><span class="dot"></span><div class="num">{medium}</div></div><div class="label">Medium priority</div></div>
   <div class="card low"><div class="num-row"><span class="dot"></span><div class="num">{low}</div></div><div class="label">Low priority</div></div>
   <div class="card total"><div class="num-row"><span class="dot"></span><div class="num">{new_today}</div></div><div class="label">New today</div></div>
+</div>
+
+<div class="trend-section">
+  <div class="trend-card trend-chart-card">
+    <div class="trend-title">Lead volume &amp; quality &mdash; last {trend_days} days</div>
+    <div class="trend-chart-wrap"><canvas id="trendChart"></canvas></div>
+  </div>
+  <div class="trend-card trend-table-card">
+    <div class="trend-title">All-time by source</div>
+    <table class="trend-table">
+      <tr><th>Jurisdiction</th><th style="text-align:right">Total</th><th style="text-align:right">V.High</th><th style="text-align:right">High</th></tr>
+      {trend_jurisdiction_rows}
+    </table>
+  </div>
 </div>
 
 <div class="source-status">
@@ -146,8 +175,33 @@ TEMPLATE = """<!DOCTYPE html>
 
 <script>
 const LEADS = {leads_json};
+const TREND_DAILY = {trend_daily_json};
 
 function pillClass(cat) {{ return cat.replace(/\\s+/g, '-'); }}
+
+new Chart(document.getElementById('trendChart'), {{
+  type: 'bar',
+  data: {{
+    labels: TREND_DAILY.map(d => d.date.slice(5)),
+    datasets: [
+      {{ label: 'Very High', data: TREND_DAILY.map(d => d.very_high), backgroundColor: '#FF5B52' }},
+      {{ label: 'High', data: TREND_DAILY.map(d => d.high), backgroundColor: '#E2726B' }},
+      {{ label: 'Medium', data: TREND_DAILY.map(d => d.medium), backgroundColor: '#4CAF7D' }},
+      {{ label: 'Low', data: TREND_DAILY.map(d => d.low), backgroundColor: '#78838A' }},
+    ]
+  }},
+  options: {{
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {{
+      x: {{ stacked: true, ticks: {{ color: '#9AA4AA', font: {{ size: 11 }} }}, grid: {{ color: '#262d30' }} }},
+      y: {{ stacked: true, beginAtZero: true, ticks: {{ color: '#9AA4AA', precision: 0 }}, grid: {{ color: '#262d30' }} }}
+    }},
+    plugins: {{
+      legend: {{ labels: {{ color: '#E8ECEE', font: {{ size: 11 }}, boxWidth: 12 }} }}
+    }}
+  }}
+}});
 
 const gridData = LEADS.map(r => [
   {{ cat: r.priority_category, score: r.score }},
@@ -155,6 +209,13 @@ const gridData = LEADS.map(r => [
   r.permit_number || '',
   {{ issued: r.issue_date || '', applied: r.application_date || '' }},
   [r.address, r.city].filter(Boolean).join(', '),
+  {{
+    name: r.contact_name || '',
+    title: r.contact_title || '',
+    phone: r.contact_phone || '',
+    email: r.contact_email || '',
+    company: r.enriched_company_name || ''
+  }},
   r.work_description || '',
   r.status || '',
   r.source_record_url || ''
@@ -177,6 +238,17 @@ const grid = new gridjs.Grid({{
         : (cell.applied ? gridjs.html(`<span title="Applied (not yet issued)" style="color:#888">${{cell.applied}} <em>(applied)</em></span>`) : '')
     }},
     {{ name: 'Address' }},
+    {{
+      name: 'Contact',
+      formatter: (cell) => {{
+        if (!cell.name && !cell.phone && !cell.email) return gridjs.html(`<span style="color:var(--ca-text-muted)">&mdash;</span>`);
+        const lines = [];
+        if (cell.name) lines.push(`<div>${{cell.name}}${{cell.title ? ` <span style="color:var(--ca-text-muted)">(${{cell.title}})</span>` : ''}}</div>`);
+        if (cell.phone) lines.push(`<div><a class="src-link" href="tel:${{cell.phone.replace(/[^0-9+]/g,'')}}">${{cell.phone}}</a></div>`);
+        if (cell.email) lines.push(`<div><a class="src-link" href="mailto:${{cell.email}}">${{cell.email}}</a></div>`);
+        return gridjs.html(`<div style="font-size:12px; line-height:1.5;">${{lines.join('')}}</div>`);
+      }}
+    }},
     {{
       name: 'Description',
       formatter: (cell) => gridjs.html(`<div class="desc-cell">${{cell ? cell.replace(/</g,'&lt;') : ''}}</div>`)
@@ -239,6 +311,15 @@ def build(summary_path: Path, out_path: Path) -> None:
         for info in summary["per_source_counts"].values()
     )
 
+    trend = summary.get("trend", {"daily": [], "weekly": [], "by_jurisdiction": []})
+    trend_jurisdiction_rows = "".join(
+        f"<tr><td>{html.escape(row['jurisdiction'])}</td>"
+        f"<td class='n'>{row['total']}</td>"
+        f"<td class='n'>{row['very_high']}</td>"
+        f"<td class='n'>{row['high']}</td></tr>"
+        for row in trend.get("by_jurisdiction", [])
+    ) or "<tr><td colspan='4' style='color:var(--ca-text-muted)'>No history yet</td></tr>"
+
     out_html = TEMPLATE.format(
         generated_at=html.escape(summary["generated_at"]),
         run_date=html.escape(summary["run_date"]),
@@ -251,6 +332,9 @@ def build(summary_path: Path, out_path: Path) -> None:
         low=summary["low"],
         source_rows=source_rows,
         leads_json=json.dumps(summary["leads"]),
+        trend_days=len(trend.get("daily", [])),
+        trend_jurisdiction_rows=trend_jurisdiction_rows,
+        trend_daily_json=json.dumps(trend.get("daily", [])),
     )
     out_path.write_text(out_html, encoding="utf-8")
     print(f"Wrote {out_path} ({len(out_html):,} bytes)")

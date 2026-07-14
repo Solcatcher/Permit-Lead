@@ -127,7 +127,7 @@ def _parse_date(value: Optional[str]) -> Optional[date]:
         return None
 
 
-def _recency_score(record: PermitRecord, cfg: ScoringConfig) -> tuple[int, List[str]]:
+def _recency_score(record: PermitRecord, cfg: ScoringConfig, as_of: Optional[date] = None) -> tuple[int, List[str]]:
     candidate_dates = [
         d
         for d in (_parse_date(record.issue_date), _parse_date(record.application_date))
@@ -136,7 +136,7 @@ def _recency_score(record: PermitRecord, cfg: ScoringConfig) -> tuple[int, List[
     if not candidate_dates:
         return 0, []
     most_recent = max(candidate_dates)
-    age_days = (date.today() - most_recent).days
+    age_days = ((as_of or date.today()) - most_recent).days
 
     if age_days <= cfg.recency_full_score_days:
         return 15, [f"Recent record ({age_days} days old)"]
@@ -162,10 +162,17 @@ def categorize(score: int, cfg: ScoringConfig) -> str:
     return "Not Relevant"
 
 
-def score_record(record: PermitRecord, cfg: ScoringConfig) -> dict:
+def score_record(record: PermitRecord, cfg: ScoringConfig, as_of: Optional[date] = None) -> dict:
     """Score one PermitRecord. Returns the record as a dict plus score,
     priority_category, and score_reasons — ready to hand to
     core.storage.write_scored_csv.
+
+    as_of: reference date for the recency component. Defaults to today, for
+    normal live scoring. Trend/history reporting (core/trends.py) passes the
+    record's own date_collected instead, so a permit's priority reflects how
+    fresh it was on the day it was found rather than decaying against
+    today's date — otherwise every historical record would show up as
+    "old" regardless of how hot a lead it was when it was new.
     """
     text = _combined_text(record)
 
@@ -174,7 +181,7 @@ def score_record(record: PermitRecord, cfg: ScoringConfig) -> dict:
     val_score, val_reasons = _value_score(record, cfg)
     contact_score, contact_reasons = _contact_score(record)
     nature_score, nature_reasons = _project_nature_score(text)
-    recency_score, recency_reasons = _recency_score(record, cfg)
+    recency_score, recency_reasons = _recency_score(record, cfg, as_of=as_of)
 
     total = min(
         100,
@@ -194,7 +201,7 @@ def score_record(record: PermitRecord, cfg: ScoringConfig) -> dict:
     return row
 
 
-def score_records(records: List[PermitRecord], cfg: ScoringConfig) -> List[dict]:
-    scored = [score_record(r, cfg) for r in records]
+def score_records(records: List[PermitRecord], cfg: ScoringConfig, as_of: Optional[date] = None) -> List[dict]:
+    scored = [score_record(r, cfg, as_of=as_of) for r in records]
     scored.sort(key=lambda r: r["score"], reverse=True)
     return scored

@@ -43,9 +43,11 @@ from connectors.lakeland import LakelandConnector
 from connectors.pinellas_drs import PinellasDRSConnector
 from connectors.tampa_city import TampaCityConnector
 from core.config import load_config
+from core.contact_enrichment import load_enrichment, merge_into_leads
 from core.dedup import DedupIndex
 from core.rollup import ACTIVE_WINDOW_DAYS, filter_active_window, load_all_normalized
 from core.storage import append_normalized_csv
+from core.trends import compute_trend
 from scoring.scorer import score_records
 
 CONNECTORS = {
@@ -134,6 +136,18 @@ def main() -> int:
     active_records = filter_active_window(all_records, ACTIVE_WINDOW_DAYS)
     active_scored = score_records(active_records, cfg.scoring)
 
+    # Contact enrichment is on-demand only (see core/contact_enrichment.py)
+    # — this just merges in whatever's already been looked up via
+    # enrich_contacts.py, adding empty contact_* fields to everything else
+    # so every row has the same columns regardless of enrichment status.
+    enrichment = load_enrichment(cfg)
+    active_scored = merge_into_leads(active_scored, enrichment)
+    new_scored = merge_into_leads(new_scored, enrichment)
+
+    # Trend history uses ALL records ever collected (not just the 30-day
+    # active window) — see core/trends.py.
+    trend = compute_trend(all_records, cfg)
+
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     fieldnames = list(active_scored[0].keys()) if active_scored else (
         list(new_scored[0].keys()) if new_scored else [
@@ -168,6 +182,7 @@ def main() -> int:
         "not_relevant": sum(1 for r in active_scored if r["priority_category"] == "Not Relevant"),
         "new_today": len(new_scored),
         "leads": active_scored,
+        "trend": trend,
     }
     summary_path = output_dir / "latest_summary.json"
     with open(summary_path, "w", encoding="utf-8") as f:

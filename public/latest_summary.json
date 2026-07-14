@@ -1,6 +1,6 @@
 {
   "run_date": "2026-07-14",
-  "generated_at": "2026-07-14T14:58:19Z",
+  "generated_at": "2026-07-14T16:03:54Z",
   "per_source_counts": {
     "tampa_city": {
       "jurisdiction": "City of Tampa",
@@ -4476,5 +4476,58 @@
       "priority_category": "Low",
       "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (1 days old)"
     }
-  ]
+  ],
+  "trend": {
+    "daily": [
+      {
+        "date": "2026-07-13",
+        "total": 105,
+        "very_high": 1,
+        "high": 4,
+        "medium": 13,
+        "low": 87,
+        "not_relevant": 0
+      },
+      {
+        "date": "2026-07-14",
+        "total": 40,
+        "very_high": 0,
+        "high": 1,
+        "medium": 8,
+        "low": 31,
+        "not_relevant": 0
+      }
+    ],
+    "weekly": [
+      {
+        "week_start": "2026-07-13",
+        "total": 145,
+        "very_high": 1,
+        "high": 5,
+        "medium": 21,
+        "low": 118,
+        "not_relevant": 0
+      }
+    ],
+    "by_jurisdiction": [
+      {
+        "jurisdiction": "City of Lakeland",
+        "total": 122,
+        "very_high": 0,
+        "high": 0
+      },
+      {
+        "jurisdiction": "City of Tampa",
+        "total": 21,
+        "very_high": 1,
+        "high": 5
+      },
+      {
+        "jurisdiction": "Hernando County",
+        "total": 2,
+        "very_high": 0,
+        "high": 0
+      }
+    ]
+  }
 }
