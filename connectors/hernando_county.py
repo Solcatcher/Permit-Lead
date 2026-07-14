@@ -19,6 +19,7 @@ address is not).
 """
 from __future__ import annotations
 
+from datetime import datetime, timedelta, timezone
 from typing import List
 
 from connectors.base import BaseConnector, clean_float, clean_str
@@ -43,8 +44,20 @@ class HernandoCountyConnector(BaseConnector):
         # returned records with permit dates scattered years in the past
         # (and one clearly-erroneous future-dated record). APPLICATION_DATE
         # is the genuine permit-filed date and is used instead.
+        #
+        # CONFIRMED LIVE (2026-07-14): permit 0501564 has APPLICATION_DATE
+        # data-entry'd as 2029-04-30 (raw epoch 1872201600000) instead of its
+        # real ~2024 date (ISSUE_DATE on the same record is 2024-06-13,
+        # roof replacement) — a typo on the county's side. Without an upper
+        # bound, that single bad record satisfies "APPLICATION_DATE >= since"
+        # every single day until the real year 2029 arrives, permanently
+        # inflating this connector's daily fetch count with a stale,
+        # non-kitchen-relevant permit. normalize()'s epoch_ms_to_iso_sane()
+        # already discards it downstream, but bounding the WHERE clause here
+        # stops it from being fetched (and logged as "fetched") at all.
         since_str = self.since_datetime().strftime("%Y-%m-%d")
-        where = f"APPLICATION_DATE>='{since_str}'"
+        upper_str = (datetime.now(timezone.utc) + timedelta(days=2)).strftime("%Y-%m-%d")
+        where = f"APPLICATION_DATE>='{since_str}' AND APPLICATION_DATE<'{upper_str}'"
         records = list(
             query_layer(
                 self.client,

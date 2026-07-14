@@ -21,6 +21,17 @@ LAYER_URL = (
     "IMS_Projects_Permits/FeatureServer/6"
 )
 
+# This ArcGIS layer has no per-record detail URL field, and the city's iMS
+# permitting portal (ims.lakelandgov.net) that actually issues these permits
+# is session-gated — even "Continue as Guest" sets a cookie first, and the
+# search results page (Find3?cat=Permits) has no URL parameter to jump
+# straight to one permit; it's a manual search form. CONFIRMED (2026-07-14):
+# fetching the search URL directly with no prior session just redirects to
+# the login page. So this is NOT a per-permit deep link — it's the public,
+# no-login entry point into Lakeland's permit search tool. The dashboard
+# labels this "Search" rather than "Open" to make that distinction clear.
+PUBLIC_SEARCH_URL = "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits"
+
 
 class LakelandConnector(BaseConnector):
     name = "lakeland"
@@ -76,7 +87,7 @@ class LakelandConnector(BaseConnector):
                 business_name=None,
                 architect=None,
                 engineer=None,
-                source_record_url=None,  # no per-record detail URL published
+                source_record_url=PUBLIC_SEARCH_URL,
                 source_dataset_url=self.source_dataset_url,
             )
             out.append(record)

@@ -21,20 +21,29 @@ TEMPLATE = """<!DOCTYPE html>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs@5.0.2/dist/theme/mermaid.min.css" integrity="sha384-jZvDSsmGB9oGGT/4l9bHXGoAv1OxvG/cFmSo0dZaSqmBgvQTKDBFAMftlXTmMbNW" crossorigin="anonymous">
 <style>
   :root {{
-    color-scheme: light;
-    /* Official CaptiveAire brand palette */
-    --ca-red: #BE151C;        /* "Thunderbird" — primary brand red */
-    --ca-red-light: #D9534A;  /* lightened tint of the brand red, for a second-tier accent */
-    --ca-blue-dark: #004C6C;  /* "Regal Blue" — secondary brand color */
-    --ca-blue-light: #61C1D8; /* "Viking" — tertiary accent */
-    --ca-gray: #74858E;       /* muted blue-gray for low-priority / quiet UI */
+    color-scheme: dark;
+    /* CaptiveAire — "Forest slate" dark theme */
+    --ca-bg: #13181a;
+    --ca-card: #1c2224;
+    --ca-card-alt: #20262a;
+    --ca-border: #262d30;
+    --ca-red: #FF5B52;        /* Very High */
+    --ca-red-on: #4A1310;
+    --ca-red-light: #E2726B;  /* High */
+    --ca-red-light-on: #4A1310;
+    --ca-green: #4CAF7D;      /* Medium */
+    --ca-green-on: #0D2E1C;
+    --ca-gray: #78838A;       /* Low */
+    --ca-gray-on: #14181B;
+    --ca-text: #E8ECEE;
+    --ca-text-muted: #9AA4AA;
   }}
   * {{ box-sizing: border-box; }}
   body {{
     margin: 0; padding: 0 0 40px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background: #f5f7f8; color: #1a1a1a;
-    border-top: 5px solid var(--ca-red);
+    background: var(--ca-bg); color: var(--ca-text);
+    border-top: 4px solid var(--ca-red);
   }}
   .page {{ padding: 24px 28px 0; }}
   .brand-header {{
@@ -43,50 +52,67 @@ TEMPLATE = """<!DOCTYPE html>
   .brand-mark {{
     color: var(--ca-red); font-weight: 800; font-size: 20px; letter-spacing: 0.2px;
   }}
-  h1 {{ font-size: 20px; margin: 0; font-weight: 600; color: var(--ca-blue-dark); }}
-  .subtitle {{ color: #667; font-size: 13px; margin-bottom: 20px; }}
+  h1 {{ font-size: 20px; margin: 0; font-weight: 600; color: var(--ca-text); }}
+  .subtitle {{ color: var(--ca-text-muted); font-size: 13px; margin-bottom: 20px; }}
   .cards {{ display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 22px; }}
   .card {{
-    flex: 1 1 140px; background: #fff; border-radius: 10px; padding: 14px 16px;
-    border: 1px solid #dfe4e6; border-top: 3px solid transparent; text-align: left;
+    flex: 1 1 140px; background: var(--ca-card); border-radius: 10px; padding: 14px 16px;
+    border: 1px solid var(--ca-border); text-align: left;
   }}
+  .card .num-row {{ display: flex; align-items: center; gap: 7px; }}
+  .card .dot {{ width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex: none; }}
   .card .num {{ font-size: 26px; font-weight: 700; line-height: 1.1; }}
-  .card .label {{ font-size: 12px; color: #667; margin-top: 4px; }}
-  .very-high {{ border-top-color: var(--ca-red); }}
+  .card .label {{ font-size: 12px; color: var(--ca-text-muted); margin-top: 4px; }}
+  .very-high .dot {{ background: var(--ca-red); }}
   .very-high .num {{ color: var(--ca-red); }}
-  .high {{ border-top-color: var(--ca-red-light); }}
+  .high .dot {{ background: var(--ca-red-light); }}
   .high .num {{ color: var(--ca-red-light); }}
-  .medium {{ border-top-color: var(--ca-blue-dark); }}
-  .medium .num {{ color: var(--ca-blue-dark); }}
-  .low {{ border-top-color: var(--ca-gray); }}
-  .low .num {{ color: var(--ca-gray); }}
-  .total {{ border-top-color: var(--ca-blue-light); }}
-  .total .num {{ color: var(--ca-blue-dark); }}
+  .medium .dot {{ background: var(--ca-green); }}
+  .medium .num {{ color: var(--ca-green); }}
+  .low .dot {{ background: var(--ca-gray); }}
+  .low .num {{ color: var(--ca-text-muted); }}
+  .total .dot {{ background: var(--ca-text-muted); }}
+  .total .num {{ color: var(--ca-text); }}
   .source-status {{
-    background: #fff; border: 1px solid #dfe4e6; border-radius: 10px;
-    padding: 12px 16px; margin-bottom: 20px; font-size: 12.5px; color: #444;
+    background: var(--ca-card); border: 1px solid var(--ca-border); border-radius: 10px;
+    padding: 12px 16px; margin-bottom: 20px; font-size: 12.5px; color: var(--ca-text-muted);
   }}
-  .source-status strong {{ color: var(--ca-blue-dark); }}
+  .source-status-head {{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }}
+  .source-status strong {{ color: var(--ca-text); }}
+  .src-reset {{ font-size: 11px; color: var(--ca-green); cursor: pointer; font-weight: 600; display: none; }}
+  .src-reset.active {{ display: inline; }}
   .source-status table {{ width: 100%; border-collapse: collapse; }}
-  .source-status td {{ padding: 3px 8px 3px 0; }}
-  .source-status td.n {{ text-align: right; font-variant-numeric: tabular-nums; color: #111; font-weight: 600; }}
+  .source-status td {{ padding: 5px 8px 5px 0; }}
+  .source-status td.n {{ text-align: right; font-variant-numeric: tabular-nums; color: var(--ca-text); font-weight: 600; }}
+  tr.src-row {{ cursor: pointer; }}
+  tr.src-row td {{ border-radius: 6px; transition: background 0.1s; }}
+  tr.src-row:hover td {{ background: var(--ca-card-alt); }}
+  tr.src-row.active td {{ background: var(--ca-card-alt); }}
+  tr.src-row.active td:first-child {{ color: var(--ca-red); font-weight: 700; }}
   .pill {{
     display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 11.5px;
-    font-weight: 600; color: #fff; white-space: nowrap;
+    font-weight: 600; white-space: nowrap;
   }}
-  .pill.Very-High {{ background: var(--ca-red); }}
-  .pill.High {{ background: var(--ca-red-light); }}
-  .pill.Medium {{ background: var(--ca-blue-dark); }}
-  .pill.Low {{ background: var(--ca-gray); }}
-  .pill.Not-Relevant {{ background: #d1d5db; color: #444; }}
+  .pill.Very-High {{ background: var(--ca-red); color: var(--ca-red-on); }}
+  .pill.High {{ background: var(--ca-red-light); color: var(--ca-red-light-on); }}
+  .pill.Medium {{ background: var(--ca-green); color: var(--ca-green-on); }}
+  .pill.Low {{ background: var(--ca-gray); color: var(--ca-gray-on); }}
+  .pill.Not-Relevant {{ background: var(--ca-card-alt); color: var(--ca-text-muted); }}
   #grid {{ font-size: 13px; }}
-  #grid .gridjs-th {{ background: var(--ca-blue-dark) !important; color: #fff !important; }}
-  #grid .gridjs-tr:hover td {{ background: #eaf5f9 !important; }}
-  #grid input.gridjs-input:focus {{ border-color: var(--ca-blue-light) !important; outline: none; }}
-  a.src-link {{ color: var(--ca-blue-dark); text-decoration: none; font-size: 12px; font-weight: 600; }}
+  #grid .gridjs-container {{ background: transparent !important; }}
+  #grid .gridjs-wrapper {{ background: var(--ca-card) !important; border-color: var(--ca-border) !important; }}
+  #grid .gridjs-th {{ background: var(--ca-card-alt) !important; color: var(--ca-text) !important; border-color: var(--ca-border) !important; }}
+  #grid .gridjs-td {{ background: var(--ca-card) !important; color: var(--ca-text) !important; border-color: var(--ca-border) !important; }}
+  #grid .gridjs-tr:hover td {{ background: var(--ca-card-alt) !important; }}
+  #grid .gridjs-footer {{ background: transparent !important; border-color: var(--ca-border) !important; }}
+  #grid .gridjs-pagination {{ color: var(--ca-text-muted) !important; }}
+  #grid .gridjs-pagination .gridjs-pages button {{ background: var(--ca-card) !important; color: var(--ca-text) !important; border-color: var(--ca-border) !important; }}
+  #grid input.gridjs-input {{ background: var(--ca-card) !important; color: var(--ca-text) !important; border-color: var(--ca-border) !important; }}
+  #grid input.gridjs-input:focus {{ border-color: var(--ca-green) !important; outline: none; }}
+  a.src-link {{ color: var(--ca-green); text-decoration: none; font-size: 12px; font-weight: 600; }}
   a.src-link:hover {{ color: var(--ca-red); text-decoration: underline; }}
   .desc-cell {{ max-width: 420px; white-space: normal; line-height: 1.35; }}
-  footer {{ margin-top: 18px; font-size: 11.5px; color: #93a0a6; }}
+  footer {{ margin-top: 18px; font-size: 11.5px; color: var(--ca-text-muted); }}
 </style>
 </head>
 <body>
@@ -96,16 +122,16 @@ TEMPLATE = """<!DOCTYPE html>
 <div class="subtitle">Generated {generated_at} &nbsp;&middot;&nbsp; run date {run_date} &nbsp;&middot;&nbsp; {new_today} new today &nbsp;&middot;&nbsp; showing all {active_total} active leads from the last {active_window_days} days</div>
 
 <div class="cards">
-  <div class="card very-high"><div class="num">{very_high}</div><div class="label">Very High priority</div></div>
-  <div class="card high"><div class="num">{high}</div><div class="label">High priority</div></div>
-  <div class="card medium"><div class="num">{medium}</div><div class="label">Medium priority</div></div>
-  <div class="card low"><div class="num">{low}</div><div class="label">Low priority</div></div>
-  <div class="card total"><div class="num">{new_today}</div><div class="label">New today</div></div>
+  <div class="card very-high"><div class="num-row"><span class="dot"></span><div class="num">{very_high}</div></div><div class="label">Very High priority</div></div>
+  <div class="card high"><div class="num-row"><span class="dot"></span><div class="num">{high}</div></div><div class="label">High priority</div></div>
+  <div class="card medium"><div class="num-row"><span class="dot"></span><div class="num">{medium}</div></div><div class="label">Medium priority</div></div>
+  <div class="card low"><div class="num-row"><span class="dot"></span><div class="num">{low}</div></div><div class="label">Low priority</div></div>
+  <div class="card total"><div class="num-row"><span class="dot"></span><div class="num">{new_today}</div></div><div class="label">New today</div></div>
 </div>
 
 <div class="source-status">
-  <strong>Source status this run</strong>
-  <table>{source_rows}</table>
+  <div class="source-status-head"><strong>Source status this run</strong><span class="src-reset" id="srcReset">Show all sources &times;</span></div>
+  <table id="srcTable">{source_rows}</table>
 </div>
 
 <div id="grid"></div>
@@ -134,7 +160,7 @@ const gridData = LEADS.map(r => [
   r.source_record_url || ''
 ]);
 
-new gridjs.Grid({{
+const grid = new gridjs.Grid({{
   columns: [
     {{
       name: 'Priority',
@@ -158,7 +184,13 @@ new gridjs.Grid({{
     {{ name: 'Status' }},
     {{
       name: 'Source',
-      formatter: (cell) => cell ? gridjs.html(`<a class="src-link" href="${{cell}}" target="_blank" rel="noopener">Open &rarr;</a>`) : ''
+      formatter: (cell) => {{
+        if (!cell) return '';
+        const isGenericSearch = cell.includes('ims.lakelandgov.net');
+        const label = isGenericSearch ? 'Search &rarr;' : 'Open &rarr;';
+        const title = isGenericSearch ? 'Opens Lakeland\\'s permit search tool — not a direct link to this permit' : '';
+        return gridjs.html(`<a class="src-link" href="${{cell}}" target="_blank" rel="noopener" title="${{title}}">${{label}}</a>`);
+      }}
     }},
   ],
   data: gridData,
@@ -166,7 +198,29 @@ new gridjs.Grid({{
   search: true,
   pagination: {{ limit: 20 }},
   className: {{ table: 'gridjs-table' }},
-}}).render(document.getElementById("grid"));
+}});
+grid.render(document.getElementById("grid"));
+
+const srcTable = document.getElementById('srcTable');
+const srcReset = document.getElementById('srcReset');
+
+function applyJurisdictionFilter(jurisdiction) {{
+  const filtered = jurisdiction ? gridData.filter(r => r[1] === jurisdiction) : gridData;
+  grid.updateConfig({{ data: filtered }}).forceRender();
+  srcTable.querySelectorAll('tr.src-row').forEach(tr => {{
+    tr.classList.toggle('active', tr.dataset.jurisdiction === jurisdiction);
+  }});
+  srcReset.classList.toggle('active', !!jurisdiction);
+}}
+
+srcTable.addEventListener('click', (e) => {{
+  const tr = e.target.closest('tr.src-row');
+  if (!tr) return;
+  const isActive = tr.classList.contains('active');
+  applyJurisdictionFilter(isActive ? null : tr.dataset.jurisdiction);
+}});
+
+srcReset.addEventListener('click', () => applyJurisdictionFilter(null));
 </script>
 
 </body>
@@ -178,7 +232,8 @@ def build(summary_path: Path, out_path: Path) -> None:
     summary = json.loads(summary_path.read_text(encoding="utf-8"))
 
     source_rows = "".join(
-        f"<tr><td>{html.escape(info['jurisdiction'])}</td>"
+        f"<tr class='src-row' data-jurisdiction=\"{html.escape(info['jurisdiction'])}\">"
+        f"<td>{html.escape(info['jurisdiction'])}</td>"
         f"<td class='n'>{info['fetched']} fetched</td>"
         f"<td class='n'>{info['new']} new</td></tr>"
         for info in summary["per_source_counts"].values()
