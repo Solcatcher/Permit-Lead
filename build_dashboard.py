@@ -20,31 +20,53 @@ TEMPLATE = """<!DOCTYPE html>
 <script src="https://cdn.jsdelivr.net/npm/gridjs@5.0.2/dist/gridjs.umd.js" integrity="sha384-/XXDzxe4FsGiAe50i/u9pY/Vy/uX654MHB1xoc1BJNnH1WXHhqHga9g3q5tF4gj7" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs@5.0.2/dist/theme/mermaid.min.css" integrity="sha384-jZvDSsmGB9oGGT/4l9bHXGoAv1OxvG/cFmSo0dZaSqmBgvQTKDBFAMftlXTmMbNW" crossorigin="anonymous">
 <style>
-  :root {{ color-scheme: light; }}
+  :root {{
+    color-scheme: light;
+    /* Official CaptiveAire brand palette */
+    --ca-red: #BE151C;        /* "Thunderbird" — primary brand red */
+    --ca-red-light: #D9534A;  /* lightened tint of the brand red, for a second-tier accent */
+    --ca-blue-dark: #004C6C;  /* "Regal Blue" — secondary brand color */
+    --ca-blue-light: #61C1D8; /* "Viking" — tertiary accent */
+    --ca-gray: #74858E;       /* muted blue-gray for low-priority / quiet UI */
+  }}
   * {{ box-sizing: border-box; }}
   body {{
-    margin: 0; padding: 24px 28px 40px;
+    margin: 0; padding: 0 0 40px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background: #f7f7f8; color: #1a1a1a;
+    background: #f5f7f8; color: #1a1a1a;
+    border-top: 5px solid var(--ca-red);
   }}
-  h1 {{ font-size: 20px; margin: 0 0 2px; }}
-  .subtitle {{ color: #666; font-size: 13px; margin-bottom: 20px; }}
+  .page {{ padding: 24px 28px 0; }}
+  .brand-header {{
+    display: flex; align-items: baseline; gap: 10px; margin: 0 0 2px;
+  }}
+  .brand-mark {{
+    color: var(--ca-red); font-weight: 800; font-size: 20px; letter-spacing: 0.2px;
+  }}
+  h1 {{ font-size: 20px; margin: 0; font-weight: 600; color: var(--ca-blue-dark); }}
+  .subtitle {{ color: #667; font-size: 13px; margin-bottom: 20px; }}
   .cards {{ display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 22px; }}
   .card {{
     flex: 1 1 140px; background: #fff; border-radius: 10px; padding: 14px 16px;
-    border: 1px solid #e5e5e7; text-align: left;
+    border: 1px solid #dfe4e6; border-top: 3px solid transparent; text-align: left;
   }}
   .card .num {{ font-size: 26px; font-weight: 700; line-height: 1.1; }}
-  .card .label {{ font-size: 12px; color: #666; margin-top: 4px; }}
-  .very-high .num {{ color: #b91c1c; }}
-  .high .num {{ color: #c2410c; }}
-  .medium .num {{ color: #a16207; }}
-  .low .num {{ color: #6b7280; }}
-  .total .num {{ color: #1a1a1a; }}
+  .card .label {{ font-size: 12px; color: #667; margin-top: 4px; }}
+  .very-high {{ border-top-color: var(--ca-red); }}
+  .very-high .num {{ color: var(--ca-red); }}
+  .high {{ border-top-color: var(--ca-red-light); }}
+  .high .num {{ color: var(--ca-red-light); }}
+  .medium {{ border-top-color: var(--ca-blue-dark); }}
+  .medium .num {{ color: var(--ca-blue-dark); }}
+  .low {{ border-top-color: var(--ca-gray); }}
+  .low .num {{ color: var(--ca-gray); }}
+  .total {{ border-top-color: var(--ca-blue-light); }}
+  .total .num {{ color: var(--ca-blue-dark); }}
   .source-status {{
-    background: #fff; border: 1px solid #e5e5e7; border-radius: 10px;
+    background: #fff; border: 1px solid #dfe4e6; border-radius: 10px;
     padding: 12px 16px; margin-bottom: 20px; font-size: 12.5px; color: #444;
   }}
+  .source-status strong {{ color: var(--ca-blue-dark); }}
   .source-status table {{ width: 100%; border-collapse: collapse; }}
   .source-status td {{ padding: 3px 8px 3px 0; }}
   .source-status td.n {{ text-align: right; font-variant-numeric: tabular-nums; color: #111; font-weight: 600; }}
@@ -52,21 +74,25 @@ TEMPLATE = """<!DOCTYPE html>
     display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 11.5px;
     font-weight: 600; color: #fff; white-space: nowrap;
   }}
-  .pill.Very-High {{ background: #dc2626; }}
-  .pill.High {{ background: #ea580c; }}
-  .pill.Medium {{ background: #ca8a04; }}
-  .pill.Low {{ background: #9ca3af; }}
+  .pill.Very-High {{ background: var(--ca-red); }}
+  .pill.High {{ background: var(--ca-red-light); }}
+  .pill.Medium {{ background: var(--ca-blue-dark); }}
+  .pill.Low {{ background: var(--ca-gray); }}
   .pill.Not-Relevant {{ background: #d1d5db; color: #444; }}
   #grid {{ font-size: 13px; }}
-  a.src-link {{ color: #2563eb; text-decoration: none; font-size: 12px; }}
-  a.src-link:hover {{ text-decoration: underline; }}
+  #grid .gridjs-th {{ background: var(--ca-blue-dark) !important; color: #fff !important; }}
+  #grid .gridjs-tr:hover td {{ background: #eaf5f9 !important; }}
+  #grid input.gridjs-input:focus {{ border-color: var(--ca-blue-light) !important; outline: none; }}
+  a.src-link {{ color: var(--ca-blue-dark); text-decoration: none; font-size: 12px; font-weight: 600; }}
+  a.src-link:hover {{ color: var(--ca-red); text-decoration: underline; }}
   .desc-cell {{ max-width: 420px; white-space: normal; line-height: 1.35; }}
-  footer {{ margin-top: 18px; font-size: 11.5px; color: #999; }}
+  footer {{ margin-top: 18px; font-size: 11.5px; color: #93a0a6; }}
 </style>
 </head>
 <body>
+<div class="page">
 
-<h1>CaptiveAire &mdash; Tampa Bay Commercial Permit Leads</h1>
+<div class="brand-header"><span class="brand-mark">CaptiveAire</span><h1>&mdash; Tampa Bay Commercial Permit Leads</h1></div>
 <div class="subtitle">Generated {generated_at} &nbsp;&middot;&nbsp; run date {run_date} &nbsp;&middot;&nbsp; {new_today} new today &nbsp;&middot;&nbsp; showing all {active_total} active leads from the last {active_window_days} days</div>
 
 <div class="cards">
@@ -89,6 +115,8 @@ TEMPLATE = """<!DOCTYPE html>
   Hernando County, Pinellas County DRS) &middot; scored via keyword + heuristic rules, no LLM &middot; full data also saved to
   CaptiveAire_Leads_Latest.csv in your connected folder.
 </footer>
+
+</div>
 
 <script>
 const LEADS = {leads_json};
