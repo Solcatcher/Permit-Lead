@@ -2,10 +2,15 @@ __pycache__/
 *.pyc
 .env
 data/raw/
-data/normalized/
 data/scored/
 data/*.db
-data/dedup_index.csv
 logs/
 dashboard.html
 .DS_Store
+
+# data/dedup_index.csv and data/normalized/permits_normalized.csv are
+# intentionally TRACKED (not ignored): GitHub Actions runners are
+# stateless between runs, so this repo is the only persistence layer for
+# "what have we already seen" across days. The daily workflow commits
+# updates to these two files back to the repo. See core/rollup.py and
+# .github/workflows/daily_permit_collection.yml.

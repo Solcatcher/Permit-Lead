@@ -6,6 +6,9 @@ on:
     - cron: "0 9 * * *"
   workflow_dispatch: {}   # allows manual "Run workflow" button too
 
+permissions:
+  contents: write   # required so the built-in GITHUB_TOKEN can push the commit below
+
 jobs:
   collect:
     runs-on: ubuntu-latest
@@ -27,10 +30,13 @@ jobs:
           ALERT_WEBHOOK_URL: ${{ secrets.ALERT_WEBHOOK_URL }}
         run: python main.py
 
-      - name: Commit updated data files back to the repo
+      - name: Build public dashboard (public/index.html)
+        run: python ci_build_dashboard.py --out-dir public
+
+      - name: Commit updated data + dashboard back to the repo
         run: |
           git config user.name "captiveaire-permit-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/ logs/ || true
+          git add data/dedup_index.csv data/normalized/permits_normalized.csv public/ || true
           git diff --cached --quiet || git commit -m "Daily permit collection $(date -u +%Y-%m-%d)"
           git push
