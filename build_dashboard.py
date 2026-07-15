@@ -28,10 +28,10 @@ TEMPLATE = """<!DOCTYPE html>
     --ca-card: #1c2224;
     --ca-card-alt: #20262a;
     --ca-border: #262d30;
-    --ca-red: #FF5B52;        /* Very High */
-    --ca-red-on: #4A1310;
-    --ca-red-light: #E2726B;  /* High */
-    --ca-red-light-on: #4A1310;
+    --ca-red: #A8291E;        /* Very High — darker red */
+    --ca-red-on: #FCEAEA;
+    --ca-red-light: #E08424;  /* High — orange */
+    --ca-red-light-on: #3D1F02;
     --ca-green: #4CAF7D;      /* Medium */
     --ca-green-on: #0D2E1C;
     --ca-gray: #78838A;       /* Low */
@@ -184,8 +184,8 @@ new Chart(document.getElementById('trendChart'), {{
   data: {{
     labels: TREND_DAILY.map(d => d.date.slice(5)),
     datasets: [
-      {{ label: 'Very High', data: TREND_DAILY.map(d => d.very_high), backgroundColor: '#FF5B52' }},
-      {{ label: 'High', data: TREND_DAILY.map(d => d.high), backgroundColor: '#E2726B' }},
+      {{ label: 'Very High', data: TREND_DAILY.map(d => d.very_high), backgroundColor: '#A8291E' }},
+      {{ label: 'High', data: TREND_DAILY.map(d => d.high), backgroundColor: '#E08424' }},
       {{ label: 'Medium', data: TREND_DAILY.map(d => d.medium), backgroundColor: '#4CAF7D' }},
       {{ label: 'Low', data: TREND_DAILY.map(d => d.low), backgroundColor: '#78838A' }},
     ]
