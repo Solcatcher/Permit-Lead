@@ -14,10 +14,10 @@
     --ca-card: #1c2224;
     --ca-card-alt: #20262a;
     --ca-border: #262d30;
-    --ca-red: #FF5B52;        /* Very High */
-    --ca-red-on: #4A1310;
-    --ca-red-light: #E2726B;  /* High */
-    --ca-red-light-on: #4A1310;
+    --ca-red: #A8291E;        /* Very High — darker red */
+    --ca-red-on: #FCEAEA;
+    --ca-red-light: #E08424;  /* High — orange */
+    --ca-red-light-on: #3D1F02;
     --ca-green: #4CAF7D;      /* Medium */
     --ca-green-on: #0D2E1C;
     --ca-gray: #78838A;       /* Low */
@@ -120,7 +120,7 @@
 <div class="page">
 
 <div class="brand-header"><span class="brand-mark">CaptiveAire</span><h1>&mdash; Tampa Bay Commercial Permit Leads</h1></div>
-<div class="subtitle">Generated 2026-07-15T10:54:53Z &nbsp;&middot;&nbsp; run date 2026-07-15 &nbsp;&middot;&nbsp; 36 new today &nbsp;&middot;&nbsp; showing all 179 active leads from the last 30 days</div>
+<div class="subtitle">Generated 2026-07-15T14:16:43Z &nbsp;&middot;&nbsp; run date 2026-07-15 &nbsp;&middot;&nbsp; 36 new today &nbsp;&middot;&nbsp; showing all 179 active leads from the last 30 days</div>
 
 <div class="cards">
   <div class="card very-high"><div class="num-row"><span class="dot"></span><div class="num">1</div></div><div class="label">Very High priority</div></div>
@@ -146,7 +146,7 @@
 
 <div class="source-status">
   <div class="source-status-head"><strong>Source status this run</strong><span class="src-reset" id="srcReset">Show all sources &times;</span></div>
-  <table id="srcTable"><tr class='src-row' data-jurisdiction="City of Tampa"><td>City of Tampa</td><td class='n'>0 fetched</td><td class='n'>0 new</td></tr><tr class='src-row' data-jurisdiction="Hillsborough County"><td>Hillsborough County</td><td class='n'>0 fetched</td><td class='n'>0 new</td></tr><tr class='src-row' data-jurisdiction="Hillsborough County (Development Review)"><td>Hillsborough County (Development Review)</td><td class='n'>0 fetched</td><td class='n'>0 new</td></tr><tr class='src-row' data-jurisdiction="City of Lakeland"><td>City of Lakeland</td><td class='n'>98 fetched</td><td class='n'>36 new</td></tr><tr class='src-row' data-jurisdiction="Hernando County"><td>Hernando County</td><td class='n'>0 fetched</td><td class='n'>0 new</td></tr><tr class='src-row' data-jurisdiction="Pinellas County (Development Review - Site Plans)"><td>Pinellas County (Development Review - Site Plans)</td><td class='n'>0 fetched</td><td class='n'>0 new</td></tr></table>
+  <table id="srcTable"><tr class='src-row' data-jurisdiction="City of Tampa"><td>City of Tampa</td><td class='n'>0 fetched</td><td class='n'>0 new</td></tr><tr class='src-row' data-jurisdiction="Hillsborough County"><td>Hillsborough County</td><td class='n'>0 fetched</td><td class='n'>0 new</td></tr><tr class='src-row' data-jurisdiction="Hillsborough County (Development Review)"><td>Hillsborough County (Development Review)</td><td class='n'>0 fetched</td><td class='n'>0 new</td></tr><tr class='src-row' data-jurisdiction="City of Lakeland"><td>City of Lakeland</td><td class='n'>98 fetched</td><td class='n'>0 new</td></tr><tr class='src-row' data-jurisdiction="Hernando County"><td>Hernando County</td><td class='n'>0 fetched</td><td class='n'>0 new</td></tr><tr class='src-row' data-jurisdiction="Pinellas County (Development Review - Site Plans)"><td>Pinellas County (Development Review - Site Plans)</td><td class='n'>0 fetched</td><td class='n'>0 new</td></tr></table>
 </div>
 
 <div id="grid"></div>
@@ -170,8 +170,8 @@ new Chart(document.getElementById('trendChart'), {
   data: {
     labels: TREND_DAILY.map(d => d.date.slice(5)),
     datasets: [
-      { label: 'Very High', data: TREND_DAILY.map(d => d.very_high), backgroundColor: '#FF5B52' },
-      { label: 'High', data: TREND_DAILY.map(d => d.high), backgroundColor: '#E2726B' },
+      { label: 'Very High', data: TREND_DAILY.map(d => d.very_high), backgroundColor: '#A8291E' },
+      { label: 'High', data: TREND_DAILY.map(d => d.high), backgroundColor: '#E08424' },
       { label: 'Medium', data: TREND_DAILY.map(d => d.medium), backgroundColor: '#4CAF7D' },
       { label: 'Low', data: TREND_DAILY.map(d => d.low), backgroundColor: '#78838A' },
     ]

@@ -1,12 +1,12 @@
 {
   "run_date": "2026-07-15",
-  "generated_at": "2026-07-15T10:54:53Z",
+  "generated_at": "2026-07-15T14:16:43Z",
   "per_source_counts": {
     "tampa_city": {
       "jurisdiction": "City of Tampa",
       "fetched": 0,
       "new": 0,
-      "error": "403 Client Error: Forbidden for url: https://arcgis.tampagov.net/arcgis/rest/services/Planning/ConstructionInspections/MapServer/0/query?where=LASTUPDATE+%3E%3D+TIMESTAMP+%272026-07-10+10%3A54%3A40%27&outFields=%2A&f=json&resultRecordCount=1000&resultOffset=0&returnGeometry=false"
+      "error": "403 Client Error: Forbidden for url: https://arcgis.tampagov.net/arcgis/rest/services/Planning/ConstructionInspections/MapServer/0/query?where=LASTUPDATE+%3E%3D+TIMESTAMP+%272026-07-10+14%3A16%3A42%27&outFields=%2A&f=json&resultRecordCount=1000&resultOffset=0&returnGeometry=false"
     },
     "hillsborough_county": {
       "jurisdiction": "Hillsborough County",
@@ -21,7 +21,7 @@
     "lakeland": {
       "jurisdiction": "City of Lakeland",
       "fetched": 98,
-      "new": 36
+      "new": 0
     },
     "hernando_county": {
       "jurisdiction": "Hernando County",
