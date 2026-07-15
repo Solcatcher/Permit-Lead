@@ -138,7 +138,15 @@ def main() -> int:
             message="\n".join(failures),
         )
 
-    return 1 if failures and not all_new_records else 0
+    # A single flaky connector (e.g. a source's API returning a transient
+    # 403/500) should never block the rest of the pipeline — the other
+    # connectors' data is still good and the dashboard should still be
+    # rebuilt and published. send_alert() above already surfaces individual
+    # failures for visibility. Only treat the whole run as failed if EVERY
+    # enabled connector failed, since that likely means something is broken
+    # on our end (bad config, network outage, etc.) rather than one source
+    # having a bad day.
+    return 1 if failures and len(failures) == len(enabled_names) else 0
 
 
 if __name__ == "__main__":
