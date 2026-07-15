@@ -1,11 +1,12 @@
 {
-  "run_date": "2026-07-14",
-  "generated_at": "2026-07-14T16:03:54Z",
+  "run_date": "2026-07-15",
+  "generated_at": "2026-07-15T10:54:53Z",
   "per_source_counts": {
     "tampa_city": {
       "jurisdiction": "City of Tampa",
-      "fetched": 17,
-      "new": 6
+      "fetched": 0,
+      "new": 0,
+      "error": "403 Client Error: Forbidden for url: https://arcgis.tampagov.net/arcgis/rest/services/Planning/ConstructionInspections/MapServer/0/query?where=LASTUPDATE+%3E%3D+TIMESTAMP+%272026-07-10+10%3A54%3A40%27&outFields=%2A&f=json&resultRecordCount=1000&resultOffset=0&returnGeometry=false"
     },
     "hillsborough_county": {
       "jurisdiction": "Hillsborough County",
@@ -19,12 +20,12 @@
     },
     "lakeland": {
       "jurisdiction": "City of Lakeland",
-      "fetched": 93,
-      "new": 34
+      "fetched": 98,
+      "new": 36
     },
     "hernando_county": {
       "jurisdiction": "Hernando County",
-      "fetched": 1,
+      "fetched": 0,
       "new": 0
     },
     "pinellas_drs": {
@@ -33,15 +34,15 @@
       "new": 0
     }
   },
-  "total_new": 40,
+  "total_new": 36,
   "active_window_days": 30,
-  "active_total": 143,
+  "active_total": 179,
   "very_high": 1,
   "high": 5,
-  "medium": 21,
-  "low": 116,
+  "medium": 28,
+  "low": 145,
   "not_relevant": 0,
-  "new_today": 40,
+  "new_today": 36,
   "leads": [
     {
       "jurisdiction": "City of Tampa",
@@ -72,7 +73,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 94,
       "priority_category": "Very High",
-      "score_reasons": "Tier-A ventilation/fire-suppression keyword match: fire suppression; +9 bonus for 4 distinct keyword matches; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (4 days old)"
+      "score_reasons": "Tier-A ventilation/fire-suppression keyword match: fire suppression; +9 bonus for 4 distinct keyword matches; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -103,7 +104,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 73,
       "priority_category": "High",
-      "score_reasons": "Tier-B foodservice venue keyword match: bar; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: new construction; Recent record (4 days old)"
+      "score_reasons": "Tier-B foodservice venue keyword match: bar; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: new construction; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -134,7 +135,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 73,
       "priority_category": "High",
-      "score_reasons": "Tier-B foodservice venue keyword match: restaurant; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: new construction; Recent record (5 days old)"
+      "score_reasons": "Tier-B foodservice venue keyword match: restaurant; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: new construction; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -165,7 +166,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 73,
       "priority_category": "High",
-      "score_reasons": "Tier-B foodservice venue keyword match: buildout; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (5 days old)"
+      "score_reasons": "Tier-B foodservice venue keyword match: buildout; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -196,7 +197,7 @@
       "date_collected": "2026-07-13T21:07:09Z",
       "score": 55,
       "priority_category": "High",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (6 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -227,7 +228,38 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 55,
       "priority_category": "High",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (4 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (5 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04134",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "5745 MONROE SPRINGS WAY",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33811",
+      "parcel_number": "236073",
+      "permit_type": "Permit",
+      "permit_subtype": "Electrical",
+      "work_description": "1206986-Bartley -TT",
+      "project_value": 1646.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 48,
+      "priority_category": "Medium",
+      "score_reasons": "Tier-B foodservice venue keyword match: bar; Project value known ($1,646) but below threshold; Recent record (1 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -258,7 +290,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 45,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -289,7 +321,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 45,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -320,7 +352,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 45,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -351,7 +383,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 45,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -382,7 +414,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 45,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value $816,383 >= $25,000 threshold; Clear project-nature signal: renovation; Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value $816,383 >= $25,000 threshold; Clear project-nature signal: renovation; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -413,7 +445,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 45,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value $3,400,000 >= $25,000 threshold; Clear project-nature signal: renovation; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value $3,400,000 >= $25,000 threshold; Clear project-nature signal: renovation; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -444,7 +476,7 @@
       "date_collected": "2026-07-13T21:07:09Z",
       "score": 45,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: new construction; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: new construction; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -475,7 +507,7 @@
       "date_collected": "2026-07-13T21:07:09Z",
       "score": 45,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -506,7 +538,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 45,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: new construction; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: new construction; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -537,7 +569,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 45,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: new construction; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: new construction; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -568,7 +600,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 45,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (3 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; At least one contact/business name present (actionable lead); Clear project-nature signal: renovation; Recent record (4 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -599,7 +631,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 40,
       "priority_category": "Medium",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac; Project value $129,369 >= $25,000 threshold; Clear project-nature signal: renovation; Recent record (4 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac; Project value $129,369 >= $25,000 threshold; Clear project-nature signal: renovation; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -630,7 +662,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 40,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value $250,000 >= $25,000 threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value $250,000 >= $25,000 threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -661,7 +693,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 40,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value $176,200 >= $25,000 threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value $176,200 >= $25,000 threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -692,7 +724,69 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 40,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value $49,300 >= $25,000 threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value $49,300 >= $25,000 threshold; Recent record (2 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04118",
+      "application_date": "2026-07-13",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "6549 SOCRUM LOOP RD N",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33809",
+      "parcel_number": "65744",
+      "permit_type": "Permit",
+      "permit_subtype": "Building Commercial",
+      "work_description": "Build Walls Under Existing Aluminum Roof",
+      "project_value": 49300.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 40,
+      "priority_category": "Medium",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value $49,300 >= $25,000 threshold; Recent record (2 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04151",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "230 FLORIDA AVE S",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33801",
+      "parcel_number": "118358",
+      "permit_type": "Permit",
+      "permit_subtype": "Building Commercial",
+      "work_description": "PP REV & INSP- Southside Phase 3",
+      "project_value": 8000000.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 40,
+      "priority_category": "Medium",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value $8,000,000 >= $25,000 threshold; Recent record (1 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -723,7 +817,38 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 38,
       "priority_category": "Medium",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value $26,888 >= $25,000 threshold; Recent record (4 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value $26,888 >= $25,000 threshold; Recent record (5 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04155",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "6445 TRADEPORT DR",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33805",
+      "parcel_number": "228091",
+      "permit_type": "Permit",
+      "permit_subtype": "Mechanical",
+      "work_description": "HVAC CHANGEOUT",
+      "project_value": 187005.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 38,
+      "priority_category": "Medium",
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value $187,005 >= $25,000 threshold; Recent record (1 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -754,7 +879,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 35,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value known ($7,500) but below threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value known ($7,500) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -785,7 +910,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 35,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value known ($10,000) but below threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value known ($10,000) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -816,7 +941,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 35,
       "priority_category": "Medium",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value $428,130 >= $25,000 threshold; Recent record (1 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value $428,130 >= $25,000 threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -847,7 +972,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 35,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $2,919,976 >= $25,000 threshold; At least one contact/business name present (actionable lead); Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $2,919,976 >= $25,000 threshold; At least one contact/business name present (actionable lead); Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -878,7 +1003,100 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 35,
       "priority_category": "Medium",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value known ($20,000) but below threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value known ($20,000) but below threshold; Recent record (2 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04142",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "4300 HWY 98  N",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33809",
+      "parcel_number": "56798",
+      "permit_type": "Permit",
+      "permit_subtype": "Roof",
+      "work_description": "Standing Seam Metal Roof Removal and Replacement",
+      "project_value": 117675.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": "SAFEGUARD ROOFING GROUP (CCC1334615)",
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 35,
+      "priority_category": "Medium",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $117,675 >= $25,000 threshold; At least one contact/business name present (actionable lead); Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04135",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "1736 NEW JERSEY RD",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33803",
+      "parcel_number": "46343",
+      "permit_type": "Permit",
+      "permit_subtype": "Mechanical",
+      "work_description": "AC change out air handler and condenser 15 ton unit",
+      "project_value": 51389.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 35,
+      "priority_category": "Medium",
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value $51,389 >= $25,000 threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04149",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "915 OHIO AVE N",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33815",
+      "parcel_number": "48788",
+      "permit_type": "Permit",
+      "permit_subtype": "Building Commercial",
+      "work_description": "New ADA Ramp",
+      "project_value": 10000.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 35,
+      "priority_category": "Medium",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Commercial occupancy indicator: commercial; Project value known ($10,000) but below threshold; Recent record (1 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -909,7 +1127,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 33,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($14,806) but below threshold; Recent record (5 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($14,806) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -940,7 +1158,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 33,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($13,649) but below threshold; Recent record (4 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($13,649) but below threshold; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -971,7 +1189,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 33,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($14,500) but below threshold; Recent record (4 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($14,500) but below threshold; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1002,7 +1220,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 33,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($14,178) but below threshold; Recent record (5 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($14,178) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1033,7 +1251,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 33,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($6,100) but below threshold; Recent record (4 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($6,100) but below threshold; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1064,7 +1282,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 33,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($10,180) but below threshold; Recent record (4 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($10,180) but below threshold; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1095,7 +1313,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 33,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($12,559) but below threshold; Recent record (6 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($12,559) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1126,7 +1344,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 33,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($14,999) but below threshold; Recent record (4 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($14,999) but below threshold; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1157,7 +1375,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 33,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($14,813) but below threshold; Recent record (5 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($14,813) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1188,7 +1406,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 33,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($4,100) but below threshold; Recent record (1 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($4,100) but below threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1219,7 +1437,69 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 33,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($4,100) but below threshold; Recent record (1 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($4,100) but below threshold; Recent record (2 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04133",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "1001 CARPENTERS WAY",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33809",
+      "parcel_number": "128096",
+      "permit_type": "Permit",
+      "permit_subtype": "Mechanical",
+      "work_description": "A/C change out of 7.5 ton RTU",
+      "project_value": 20900.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 33,
+      "priority_category": "Low",
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical, rtu; +3 bonus for 2 distinct keyword matches; Project value known ($20,900) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04124",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "625 SHORE ACRES DR",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33801",
+      "parcel_number": "64455",
+      "permit_type": "Permit",
+      "permit_subtype": "Mechanical",
+      "work_description": "PP INSP - HVAC",
+      "project_value": 10000.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 33,
+      "priority_category": "Low",
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: hvac, mechanical; +3 bonus for 2 distinct keyword matches; Project value known ($10,000) but below threshold; Recent record (1 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1250,7 +1530,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($14,382) but below threshold; Recent record (5 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($14,382) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1281,7 +1561,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($1,500) but below threshold; At least one contact/business name present (actionable lead); Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($1,500) but below threshold; At least one contact/business name present (actionable lead); Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1312,7 +1592,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($1,850) but below threshold; Recent record (5 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($1,850) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1343,7 +1623,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($8,000) but below threshold; Recent record (6 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($8,000) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1374,7 +1654,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($14,665) but below threshold; Recent record (6 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($14,665) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1405,7 +1685,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($6,695) but below threshold; Recent record (6 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($6,695) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1436,7 +1716,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($4,360) but below threshold; At least one contact/business name present (actionable lead); Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($4,360) but below threshold; At least one contact/business name present (actionable lead); Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1467,7 +1747,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($2,499) but below threshold; At least one contact/business name present (actionable lead); Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($2,499) but below threshold; At least one contact/business name present (actionable lead); Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1498,7 +1778,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($4,875) but below threshold; Recent record (4 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($4,875) but below threshold; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1529,7 +1809,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($4,800) but below threshold; At least one contact/business name present (actionable lead); Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($4,800) but below threshold; At least one contact/business name present (actionable lead); Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1560,7 +1840,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($1,465) but below threshold; Recent record (6 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($1,465) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1591,7 +1871,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($6,800) but below threshold; Recent record (5 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($6,800) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1622,7 +1902,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($5,500) but below threshold; At least one contact/business name present (actionable lead); Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($5,500) but below threshold; At least one contact/business name present (actionable lead); Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1653,7 +1933,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($1,000) but below threshold; At least one contact/business name present (actionable lead); Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($1,000) but below threshold; At least one contact/business name present (actionable lead); Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1684,7 +1964,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($1,465) but below threshold; Recent record (2 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($1,465) but below threshold; Recent record (3 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1715,7 +1995,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($1,465) but below threshold; Recent record (2 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($1,465) but below threshold; Recent record (3 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -1746,7 +2026,7 @@
       "date_collected": "2026-07-13T21:07:09Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Clear project-nature signal: new construction; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Clear project-nature signal: new construction; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1777,7 +2057,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($1,465) but below threshold; Recent record (2 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($1,465) but below threshold; Recent record (3 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1808,7 +2088,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($9,300) but below threshold; Recent record (1 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($9,300) but below threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1839,7 +2119,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $138,160 >= $25,000 threshold; Clear project-nature signal: new construction; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $138,160 >= $25,000 threshold; Clear project-nature signal: new construction; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1870,7 +2150,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($15,000) but below threshold; At least one contact/business name present (actionable lead); Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($15,000) but below threshold; At least one contact/business name present (actionable lead); Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1901,7 +2181,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($11,279) but below threshold; Recent record (1 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($11,279) but below threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1932,7 +2212,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $138,160 >= $25,000 threshold; Clear project-nature signal: new construction; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $138,160 >= $25,000 threshold; Clear project-nature signal: new construction; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1963,7 +2243,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($9,066) but below threshold; Recent record (1 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($9,066) but below threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -1994,7 +2274,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($8,700) but below threshold; At least one contact/business name present (actionable lead); Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($8,700) but below threshold; At least one contact/business name present (actionable lead); Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2025,7 +2305,193 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 30,
       "priority_category": "Low",
-      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($14,181) but below threshold; Recent record (1 days old)"
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($14,181) but below threshold; Recent record (2 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04123",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "2513 TAHOE DR",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33805",
+      "parcel_number": "165440",
+      "permit_type": "Permit",
+      "permit_subtype": "Mechanical",
+      "work_description": "change 3ton air handler",
+      "project_value": 3611.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 30,
+      "priority_category": "Low",
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($3,611) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04152",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "3680 BARRED OWL RD",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33811",
+      "parcel_number": "169067",
+      "permit_type": "Permit",
+      "permit_subtype": "Roof",
+      "work_description": "REROOF",
+      "project_value": 15844.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": "ROOFELITE LLC (CCC1335486)",
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 30,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($15,844) but below threshold; At least one contact/business name present (actionable lead); Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04144",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "1569 TOWN CENTER DR",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33803",
+      "parcel_number": "160285",
+      "permit_type": "Permit",
+      "permit_subtype": "Mechanical",
+      "work_description": "CHANGE OUT EXISTING",
+      "project_value": 18500.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 30,
+      "priority_category": "Low",
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($18,500) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04132",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "521 POPPELL DR",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33813",
+      "parcel_number": "54208",
+      "permit_type": "Permit",
+      "permit_subtype": "Mechanical",
+      "work_description": "AC Changeout",
+      "project_value": 13300.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 30,
+      "priority_category": "Low",
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($13,300) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04150",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "1407 GLENDALE ST",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33803",
+      "parcel_number": "25517",
+      "permit_type": "Permit",
+      "permit_subtype": "Mechanical",
+      "work_description": "installinmg a mini split",
+      "project_value": 3200.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 30,
+      "priority_category": "Low",
+      "score_reasons": "Tier-C general HVAC/mechanical keyword match: mechanical; Project value known ($3,200) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04157",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "1638 PINEBERRY ST",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33803",
+      "parcel_number": "112640",
+      "permit_type": "Permit",
+      "permit_subtype": "Roof",
+      "work_description": "1638 pineberry",
+      "project_value": 9000.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": "SUN KISSED CONTRACTING INC (CCC1331855)",
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 30,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($9,000) but below threshold; At least one contact/business name present (actionable lead); Recent record (1 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -2056,7 +2522,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -2087,7 +2553,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -2118,7 +2584,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2149,7 +2615,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $122,940 >= $25,000 threshold; Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $122,940 >= $25,000 threshold; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2180,7 +2646,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $229,200 >= $25,000 threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $229,200 >= $25,000 threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2211,7 +2677,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $31,662 >= $25,000 threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $31,662 >= $25,000 threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2242,7 +2708,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $227,040 >= $25,000 threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $227,040 >= $25,000 threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2273,7 +2739,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $101,160 >= $25,000 threshold; Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $101,160 >= $25,000 threshold; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2304,7 +2770,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $49,409 >= $25,000 threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $49,409 >= $25,000 threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2335,7 +2801,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $119,400 >= $25,000 threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $119,400 >= $25,000 threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2366,7 +2832,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $50,000 >= $25,000 threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $50,000 >= $25,000 threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2397,7 +2863,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $132,120 >= $25,000 threshold; Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $132,120 >= $25,000 threshold; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2428,7 +2894,7 @@
       "date_collected": "2026-07-13T21:07:09Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2459,7 +2925,7 @@
       "date_collected": "2026-07-13T21:07:09Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2490,7 +2956,7 @@
       "date_collected": "2026-07-13T21:07:09Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2521,7 +2987,7 @@
       "date_collected": "2026-07-13T21:07:09Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -2552,7 +3018,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Tampa",
@@ -2583,7 +3049,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; At least one contact/business name present (actionable lead); Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2614,7 +3080,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $138,000 >= $25,000 threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $138,000 >= $25,000 threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2645,7 +3111,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $37,000 >= $25,000 threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $37,000 >= $25,000 threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2676,7 +3142,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $30,000 >= $25,000 threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $30,000 >= $25,000 threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2707,7 +3173,193 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 25,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $176,200 >= $25,000 threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $176,200 >= $25,000 threshold; Recent record (2 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04130",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "600 BONNET SPRINGS BLVD",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33815",
+      "parcel_number": "243152",
+      "permit_type": "Permit",
+      "permit_subtype": "Electrical",
+      "work_description": "Adding Pole Lights",
+      "project_value": 85000.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 25,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $85,000 >= $25,000 threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04140",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "628 WILLIAMS ST W",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33805",
+      "parcel_number": "141495",
+      "permit_type": "Permit",
+      "permit_subtype": "Building Residential",
+      "work_description": "new single family home",
+      "project_value": 150000.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 25,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $150,000 >= $25,000 threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04126",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "981 LAKE HOLLINGSWORTH DR",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33803",
+      "parcel_number": "85612",
+      "permit_type": "Permit",
+      "permit_subtype": "Building Residential",
+      "work_description": "New Single Family Residence",
+      "project_value": 885000.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 25,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $885,000 >= $25,000 threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04131",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "3526 BARLEY LN",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33803",
+      "parcel_number": "2555",
+      "permit_type": "Permit",
+      "permit_subtype": "Roof",
+      "work_description": "Reroof 65sq. with Owens Corning shingles",
+      "project_value": 37871.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 25,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $37,871 >= $25,000 threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04136",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "302 HEATHERPOINT DR",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33809",
+      "parcel_number": "29482",
+      "permit_type": "Permit",
+      "permit_subtype": "Roof",
+      "work_description": "PP REV & INSP- SHINGLES",
+      "project_value": 28168.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 25,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $28,168 >= $25,000 threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04141",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "630 WILLIAMS ST W",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33805",
+      "parcel_number": "74075",
+      "permit_type": "Permit",
+      "permit_subtype": "Building Residential",
+      "work_description": "new home single family",
+      "project_value": 150000.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 25,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value $150,000 >= $25,000 threshold; Recent record (1 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2738,7 +3390,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($2,000) but below threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($2,000) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2769,7 +3421,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($8,000) but below threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($8,000) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2800,7 +3452,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($13,500) but below threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($13,500) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2831,7 +3483,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($500) but below threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($500) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2862,7 +3514,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($4,000) but below threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($4,000) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2893,7 +3545,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($15,104) but below threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($15,104) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2924,7 +3576,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($20,000) but below threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($20,000) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2955,7 +3607,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($1,700) but below threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($1,700) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -2986,7 +3638,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($13,442) but below threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($13,442) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3017,7 +3669,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($1,848) but below threshold; Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($1,848) but below threshold; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3048,7 +3700,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($3,050) but below threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($3,050) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3079,7 +3731,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($3,800) but below threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($3,800) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3110,7 +3762,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($11,543) but below threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($11,543) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3141,7 +3793,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($3,300) but below threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($3,300) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3172,7 +3824,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($10,700) but below threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($10,700) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3203,7 +3855,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($14,725) but below threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($14,725) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3234,7 +3886,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($11,000) but below threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($11,000) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3265,7 +3917,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($1,615) but below threshold; Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($1,615) but below threshold; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3296,7 +3948,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($14,711) but below threshold; Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($14,711) but below threshold; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3327,7 +3979,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($5,000) but below threshold; Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($5,000) but below threshold; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3358,7 +4010,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($8,000) but below threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($8,000) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3389,7 +4041,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($4,950) but below threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($4,950) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3420,7 +4072,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($3,200) but below threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($3,200) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3451,7 +4103,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($7,975) but below threshold; Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($7,975) but below threshold; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3482,7 +4134,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($6,500) but below threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($6,500) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3513,7 +4165,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($4,500) but below threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($4,500) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3544,7 +4196,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($12,350) but below threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($12,350) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3575,7 +4227,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($4,000) but below threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($4,000) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3606,7 +4258,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($11,500) but below threshold; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($11,500) but below threshold; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3637,7 +4289,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($7,000) but below threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($7,000) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3668,7 +4320,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($955) but below threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($955) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3699,7 +4351,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($20,000) but below threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($20,000) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3730,7 +4382,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($2,500) but below threshold; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($2,500) but below threshold; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3761,7 +4413,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($2,499) but below threshold; Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($2,499) but below threshold; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3792,7 +4444,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($21,150) but below threshold; Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($21,150) but below threshold; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3823,7 +4475,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($775) but below threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($775) but below threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3854,7 +4506,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($9,927) but below threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($9,927) but below threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3885,7 +4537,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($6,436) but below threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($6,436) but below threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3916,7 +4568,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($12,288) but below threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($12,288) but below threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3947,7 +4599,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($5,000) but below threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($5,000) but below threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -3978,7 +4630,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($2,112) but below threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($2,112) but below threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -4009,7 +4661,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($5,200) but below threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($5,200) but below threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -4040,7 +4692,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($15,845) but below threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($15,845) but below threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -4071,7 +4723,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($2,500) but below threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($2,500) but below threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -4102,7 +4754,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($692) but below threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($692) but below threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -4133,7 +4785,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($3,500) but below threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($3,500) but below threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -4164,7 +4816,7 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($8,700) but below threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($8,700) but below threshold; Recent record (2 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -4195,7 +4847,441 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 20,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($1,800) but below threshold; Recent record (1 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($1,800) but below threshold; Recent record (2 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04139",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "6263 EGRET DR",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33809",
+      "parcel_number": "77655",
+      "permit_type": "Permit",
+      "permit_subtype": "Building Residential",
+      "work_description": "CHANGE OUT GARAGE DOOR SIZE FOR SIZE",
+      "project_value": 4805.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 20,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($4,805) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04143",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "1411 CONNESTEE RD",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33805",
+      "parcel_number": "80965",
+      "permit_type": "Permit",
+      "permit_subtype": "Roof",
+      "work_description": "TEAR OFF AND REPLACE RE ROOF",
+      "project_value": 9660.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 20,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($9,660) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04153",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "4428 RIVER BIRCH BND",
+      "city": "Lakeland",
+      "state": "FL",
+      "zip_code": "33811",
+      "parcel_number": "273930",
+      "permit_type": "Permit",
+      "permit_subtype": "Building Residential",
+      "work_description": "GENERATOR INSTALL",
+      "project_value": 14000.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 20,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($14,000) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04125",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "608 KERNEYWOOD ST",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33803",
+      "parcel_number": "35213",
+      "permit_type": "Permit",
+      "permit_subtype": "Roof",
+      "work_description": "roof over rear low slope roof",
+      "project_value": 4835.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 20,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($4,835) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04129",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "4615 DARCIN DR",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33813",
+      "parcel_number": "89329",
+      "permit_type": "Permit",
+      "permit_subtype": "Roof",
+      "work_description": "tear off and re roof",
+      "project_value": 19570.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 20,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($19,570) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04147",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "2116 BASSEDENA CIR W",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33805",
+      "parcel_number": "2631",
+      "permit_type": "Permit",
+      "permit_subtype": "Roof",
+      "work_description": "Re-roofing | No structural modification",
+      "project_value": 14233.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 20,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($14,233) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04148",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "5872 CRANE DR",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33809",
+      "parcel_number": "77615",
+      "permit_type": "Permit",
+      "permit_subtype": "Building Residential",
+      "work_description": "Remove and replace 8 windows size for size",
+      "project_value": 15878.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 20,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($15,878) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04156",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "2200 FAIRMOUNT AVE",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33803",
+      "parcel_number": "85701",
+      "permit_type": "Permit",
+      "permit_subtype": "Fence/Retaining Wall",
+      "work_description": "Replace Retaining Wall",
+      "project_value": 20000.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 20,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($20,000) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04128",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "4586 LAKELAND HARBOR LOOP",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33805",
+      "parcel_number": "142559",
+      "permit_type": "Permit",
+      "permit_subtype": "Building Residential",
+      "work_description": "Replace 7 windows, size for size.",
+      "project_value": 5015.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 20,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($5,015) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04146",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "1512 HANDLEY BLVD",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33803",
+      "parcel_number": "28065",
+      "permit_type": "Permit",
+      "permit_subtype": "Roof",
+      "work_description": "roof replacement",
+      "project_value": 15118.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 20,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($15,118) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04127",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "618 WILLIAMS ST W",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33805",
+      "parcel_number": "74068",
+      "permit_type": "Permit",
+      "permit_subtype": "Roof",
+      "work_description": "Re-roof shingles",
+      "project_value": 6800.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 20,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($6,800) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04137",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "714 CLAYTON AVE S",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33801",
+      "parcel_number": "9496",
+      "permit_type": "Permit",
+      "permit_subtype": "Roof",
+      "work_description": "TEAR OFF AND REROOF",
+      "project_value": 10870.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 20,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($10,870) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04138",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "717 CLAYTON AVE S",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33801",
+      "parcel_number": "9498",
+      "permit_type": "Permit",
+      "permit_subtype": "Roof",
+      "work_description": "TEAR OFF AND REROOF",
+      "project_value": 10277.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 20,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($10,277) but below threshold; Recent record (1 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04154",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "4428 RIVER BIRCH BND",
+      "city": "Lakeland",
+      "state": "FL",
+      "zip_code": "33811",
+      "parcel_number": "273930",
+      "permit_type": "Permit",
+      "permit_subtype": "Tanks",
+      "work_description": "PP INSP- LP TANK INSTALL",
+      "project_value": 4000.0,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 20,
+      "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Project value known ($4,000) but below threshold; Recent record (1 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -4226,7 +5312,7 @@
       "date_collected": "2026-07-13T20:42:55Z",
       "score": 15,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -4257,7 +5343,7 @@
       "date_collected": "2026-07-13T21:07:09Z",
       "score": 15,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -4288,7 +5374,7 @@
       "date_collected": "2026-07-13T21:07:09Z",
       "score": 15,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -4319,7 +5405,7 @@
       "date_collected": "2026-07-13T21:07:09Z",
       "score": 15,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (4 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (5 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -4350,7 +5436,7 @@
       "date_collected": "2026-07-13T21:07:09Z",
       "score": 15,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (3 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (4 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -4381,7 +5467,7 @@
       "date_collected": "2026-07-13T21:07:09Z",
       "score": 15,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (6 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (7 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -4412,7 +5498,7 @@
       "date_collected": "2026-07-13T21:07:09Z",
       "score": 15,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -4443,7 +5529,7 @@
       "date_collected": "2026-07-13T21:07:09Z",
       "score": 15,
       "priority_category": "Low",
-      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (5 days old)"
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (6 days old)"
     },
     {
       "jurisdiction": "City of Lakeland",
@@ -4474,6 +5560,37 @@
       "date_collected": "2026-07-14T13:28:13Z",
       "score": 15,
       "priority_category": "Low",
+      "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (2 days old)"
+    },
+    {
+      "jurisdiction": "City of Lakeland",
+      "permit_number": "BLD26-04145",
+      "application_date": "2026-07-14",
+      "issue_date": null,
+      "expiration_date": null,
+      "status": null,
+      "address": "2345 COMMERCE POINT DR",
+      "city": "LAKELAND",
+      "state": "FL",
+      "zip_code": "33801",
+      "parcel_number": "149792",
+      "permit_type": "Permit",
+      "permit_subtype": "Tent",
+      "work_description": "Temporary Tent for Employee Luncheon",
+      "project_value": null,
+      "square_footage": null,
+      "contractor_name": null,
+      "contractor_company": null,
+      "applicant_name": null,
+      "owner_name": null,
+      "business_name": null,
+      "architect": null,
+      "engineer": null,
+      "source_record_url": "https://ims.lakelandgov.net/ims/Account/Anonymous?returnUrl=%2Fims%2FFind3%3Fcat%3DPermits",
+      "source_dataset_url": "https://services1.arcgis.com/mcbQY5xNGGGM1vBX/arcgis/rest/services/IMS_Projects_Permits/FeatureServer/6",
+      "date_collected": "2026-07-15T10:54:52Z",
+      "score": 15,
+      "priority_category": "Low",
       "score_reasons": "No CaptiveAire-relevant keywords found in permit type/subtype/description; Recent record (1 days old)"
     }
   ],
@@ -4496,23 +5613,32 @@
         "medium": 8,
         "low": 31,
         "not_relevant": 0
+      },
+      {
+        "date": "2026-07-15",
+        "total": 36,
+        "very_high": 0,
+        "high": 0,
+        "medium": 7,
+        "low": 29,
+        "not_relevant": 0
       }
     ],
     "weekly": [
       {
         "week_start": "2026-07-13",
-        "total": 145,
+        "total": 181,
         "very_high": 1,
         "high": 5,
-        "medium": 21,
-        "low": 118,
+        "medium": 28,
+        "low": 147,
         "not_relevant": 0
       }
     ],
     "by_jurisdiction": [
       {
         "jurisdiction": "City of Lakeland",
-        "total": 122,
+        "total": 158,
         "very_high": 0,
         "high": 0
       },
