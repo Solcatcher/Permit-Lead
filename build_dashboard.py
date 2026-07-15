@@ -166,8 +166,8 @@ TEMPLATE = """<!DOCTYPE html>
 <div id="grid"></div>
 
 <footer>
-  CaptiveAire permit lead system &middot; 6 verified public sources (City of Tampa, Hillsborough County x2, City of Lakeland,
-  Hernando County, Pinellas County DRS) &middot; scored via keyword + heuristic rules, no LLM &middot; full data also saved to
+  CaptiveAire permit lead system &middot; 7 verified public sources (City of Tampa, Hillsborough County x2, City of Lakeland,
+  Hernando County, Pinellas County DRS, Pasco County) &middot; scored via keyword + heuristic rules, no LLM &middot; full data also saved to
   CaptiveAire_Leads_Latest.csv in your connected folder.
 </footer>
 
@@ -258,9 +258,9 @@ const grid = new gridjs.Grid({{
       name: 'Source',
       formatter: (cell) => {{
         if (!cell) return '';
-        const isGenericSearch = cell.includes('ims.lakelandgov.net');
+        const isGenericSearch = cell.includes('ims.lakelandgov.net') || cell.includes('CapHome.aspx');
         const label = isGenericSearch ? 'Search &rarr;' : 'Open &rarr;';
-        const title = isGenericSearch ? 'Opens Lakeland\\'s permit search tool — not a direct link to this permit' : '';
+        const title = isGenericSearch ? 'Opens a general permit/project search tool — not a direct link to this record' : '';
         return gridjs.html(`<a class="src-link" href="${{cell}}" target="_blank" rel="noopener" title="${{title}}">${{label}}</a>`);
       }}
     }},

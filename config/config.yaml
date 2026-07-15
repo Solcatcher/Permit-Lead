@@ -38,6 +38,8 @@ connectors:
     enabled: true
   pinellas_drs:
     enabled: true
+  pasco_county:
+    enabled: true
 
 scoring:
   # Minimum project_value ($) to get the project-value score bonus.

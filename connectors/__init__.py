@@ -4,6 +4,7 @@ from connectors.hillsborough_dev_review import HillsboroughDevReviewConnector
 from connectors.lakeland import LakelandConnector
 from connectors.hernando_county import HernandoCountyConnector
 from connectors.pinellas_drs import PinellasDRSConnector
+from connectors.pasco_county import PascoCountyConnector
 
 ALL_CONNECTORS = {
     "tampa_city": TampaCityConnector,
@@ -12,4 +13,5 @@ ALL_CONNECTORS = {
     "lakeland": LakelandConnector,
     "hernando_county": HernandoCountyConnector,
     "pinellas_drs": PinellasDRSConnector,
+    "pasco_county": PascoCountyConnector,
 }
