@@ -42,6 +42,7 @@ from connectors.hillsborough_dev_review import HillsboroughDevReviewConnector
 from connectors.lakeland import LakelandConnector
 from connectors.pinellas_drs import PinellasDRSConnector
 from connectors.tampa_city import TampaCityConnector
+from connectors.pasco_county import PascoCountyConnector
 from core.config import load_config
 from core.contact_enrichment import load_enrichment, merge_into_leads
 from core.dedup import DedupIndex
@@ -57,6 +58,13 @@ CONNECTORS = {
     "lakeland": LakelandConnector,
     "hernando_county": HernandoCountyConnector,
     "pinellas_drs": PinellasDRSConnector,
+    # NOTE: pasco_county is intentionally NOT run through fetch_raw() here —
+    # its date filtering happens client-side in Python (see
+    # connectors/pasco_county.py's fetch_raw docstring), not via an ArcGIS
+    # WHERE clause, so the raw_input/pasco_county_page*.json file must
+    # already be pre-filtered to the lookback window by whoever fetched it
+    # (the agent), same contract as every other source's raw_input file.
+    "pasco_county": PascoCountyConnector,
 }
 
 
