@@ -1,12 +1,12 @@
 {
   "run_date": "2026-07-20",
-  "generated_at": "2026-07-20T11:49:15Z",
+  "generated_at": "2026-07-20T12:52:39Z",
   "per_source_counts": {
     "tampa_city": {
       "jurisdiction": "City of Tampa",
       "fetched": 0,
       "new": 0,
-      "error": "403 Client Error: Forbidden for url: https://arcgis.tampagov.net/arcgis/rest/services/Planning/ConstructionInspections/MapServer/0/query?where=LASTUPDATE+%3E%3D+TIMESTAMP+%272026-07-15+11%3A48%3A58%27&outFields=%2A&f=json&resultRecordCount=1000&resultOffset=0&returnGeometry=false"
+      "error": "403 Client Error: Forbidden for url: https://arcgis.tampagov.net/arcgis/rest/services/Planning/ConstructionInspections/MapServer/0/query?where=LASTUPDATE+%3E%3D+TIMESTAMP+%272026-07-15+12%3A52%3A31%27&outFields=%2A&f=json&resultRecordCount=1000&resultOffset=0&returnGeometry=false"
     },
     "hillsborough_county": {
       "jurisdiction": "Hillsborough County",
@@ -36,7 +36,7 @@
     "pasco_county": {
       "jurisdiction": "Pasco County",
       "fetched": 31,
-      "new": 3
+      "new": 0
     }
   },
   "total_new": 3,
